@@ -1,0 +1,43 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  background: black;
+  color: white;
+  font-size: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+i {
+  margin: 0px 10px;
+}
+
+i:hover{
+  color: #4099ff;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  i {
+    margin: 0px 50px;
+  }
+}
+
+@media (min-width: 250px) {
+  i {
+    margin: 0px 25px;
+  }
+}
+
+@media (min-width: 1000px) {
+  i {
+    margin: 0px 75px;
+  }
+}
