@@ -24,6 +24,13 @@ i:hover{
   cursor: pointer;
 }
 
+.no-selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .fa-twitter:hover {
   -webkit-animation: scaling 1s infinite; /* Safari 4+ */
   -moz-animation:    scaling 1s infinite; /* Fx 5+ */
