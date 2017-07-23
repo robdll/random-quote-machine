@@ -9,7 +9,11 @@ function newQuotes(){
       return response.json();
     })
   .then(function(response) {  
-    console.log(response)
+    var container = document.getElementById('quote-container');
+    container.innerHTML = response[0].content;
+    var cite = document.createElement("cite");
+    cite.innerHTML = response[0].title;
+    container.prepend(cite);
   })  
   .catch(function(err) {  
     console.log('Fetch Error', err);  
