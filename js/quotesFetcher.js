@@ -27,7 +27,7 @@ function newQuotes(time){
     var randomQuote = quotes[randomIndex]
     container.fadeOut(time, changeQuote);
     function changeQuote() {
-      quoteTag.innerHTML = randomQuote.content;
+      quoteTag.innerHTML = randomQuote.content.replace(/<\/?p>/g,'');
       writerTag.innerHTML = randomQuote.title;
       container.fadeIn(1000);
     }
