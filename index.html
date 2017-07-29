@@ -4,9 +4,10 @@
   <link rel="icon" href="resources/favicon.gif" type="image/gif" >
   <!--## style -->
   <link rel='stylesheet' type='text/css' href='css/core.css' />
+  
   <script type="text/javascript" src="https://use.fontawesome.com/4c96e7a2e8.js"></script>
-  <script type="text/javascript" src="js/quotesFetcher.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/quotesFetcher.js"></script>
 
   <!--## My scripts -->
 </head>
@@ -15,11 +16,12 @@
 <main>
 
   <div id='quote-container'>
-    
+      <cite></cite>
+      <p></p>
   </div>
 
   <div class="no-selection">
-    <i class="fa fa-refresh" aria-hidden="true" onclick="newQuotes()"></i>
+    <i class="fa fa-refresh" aria-hidden="true" onclick="newQuotes(1000)"></i>
     <i class="fa fa-twitter" aria-hidden="true"></i>
   </div>
 
