@@ -1,7 +1,7 @@
 
 $(document).ready(loadQuotes);
 
-var quotes = [];
+var quotes = quotes= [{ content: 'Sometimes API fetch goes wrong and you\ are left with a nonsensical quote.', title: 'Rob.dll' }];
 var container;
 var quoteTag;
 var writerTag;
@@ -16,7 +16,7 @@ function loadQuotes(){
     .then(function(response) { return response.json(); })
     .then(function(response) { quotes = response; return 0; })
     .then(newQuotes)
-    .catch(function(err) { console.log('Fetch Error', err); });;
+    .catch(function(err) { newQuotes(0); });
 }
 
 
