@@ -37,6 +37,10 @@ nav a:hover {
   cursor: pointer; 
 }
 
+h1 {
+  color: #969393
+}
+
 main {
   min-height: 100%;
   display: flex;
@@ -44,6 +48,7 @@ main {
   justify-content: center;
   align-content: center;
   text-align: center;
+  padding-top: 50px;
 }
 
 #quote-container {
