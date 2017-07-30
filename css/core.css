@@ -49,6 +49,7 @@ main {
   align-content: center;
   text-align: center;
   padding-top: 50px;
+  box-sizing: border-box;
 }
 
 #quote-container {
