@@ -9,7 +9,7 @@
   <!--## scripts -->
   <script type="text/javascript" src="https://use.fontawesome.com/4c96e7a2e8.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/quotesFetcher.js"></script>
+  <script type="text/javascript" src="js/quotesManager.js"></script>
   <script type="text/javascript" src="js/animations.js"></script>
 </head>
 
@@ -20,7 +20,7 @@
     <div id='quote-container'> <p></p> <cite></cite> </div>
 
     <div class="icon-container">
-      <div id="scaler"><i class="fa fa-twitter" aria-hidden="true" ></i></div>
+      <div id="scaler"><i class="fa fa-twitter" aria-hidden="true" onclick="tweet()"></i></div>
       <div id="spinner"><i class="fa fa-refresh" aria-hidden="true" onclick="newQuotes(1000)"></i></div>
     </div>
     
