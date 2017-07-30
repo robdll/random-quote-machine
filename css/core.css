@@ -1,50 +1,112 @@
 body, html {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 5px;
+  font-family: Verdana, Times, serif;
+  color: white;
   background: black;
+}
+
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
   color: white;
   font-size: 2em;
 }
 
+nav a:hover {
+  text-decoration: none;
+  /*animation-name: nav-link-hover;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;*/
+  cursor: hand; 
+}
+
+/*
+nav a {
+  animation-name: nav-link-hover;
+}*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px dotted white;
+  z-index: 2;
+  padding: 10px;
+}
+
 main {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   align-content: center;
   text-align: center;
 }
 
-i {
-  margin: 0px 10px;
+#quote-container {
+  flex-grow: 1;
+  font-size: 2.5em;
+  line-height: 1.5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-i:hover{
-  color: #4099ff;
-  cursor: pointer;
+cite {
+  align-self: flex-end;
+  font-size: 0.7em;
+  font-style: italic;
+  color: #b09c9c;
+  margin-right: 20px;
 }
 
-.no-selection {
+.icon-container {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-size: 3em;
+  margin: 20px 0px;
+  text-align: right;
 }
 
-.fa-twitter:hover {
+#scaler, #spinner {
+  margin: 0px 10px;
+  display: inline-block;
+}
+
+i:hover {
+  color: #4099ff;
+  cursor: pointer;
+}
+
+.scale {
   -webkit-animation: scaling 1s infinite; /* Safari 4+ */
   -moz-animation:    scaling 1s infinite; /* Fx 5+ */
   -o-animation:      scaling 1s infinite; /* Opera 12+ */
   animation:         scaling 1s infinite; /* IE 10+, Fx 29+ */
 }
 
-.fa-refresh:hover {
+.rotate {
   -webkit-animation: rotation 2s infinite; /* Safari 4+ */
   -moz-animation:    rotation 2s infinite; /* Fx 5+ */
   -o-animation:      rotation 2s infinite; /* Opera 12+ */
   animation:         rotation 2s infinite; /* IE 10+, Fx 29+ */
 }
 
+.enlight {
+  animation: enlight 1s ease-out 1;
+}
 
 /** ANIMATION */
 @keyframes rotation {
@@ -60,7 +122,7 @@ i:hover{
   }
 }
 
-/** ANIMATION */
+
 @keyframes scaling {
   0% { 
     -ms-transform: scale(1); /* IE 9 */
@@ -79,21 +141,40 @@ i:hover{
   }
 }
 
+
+@keyframes enlight { 
+  0% { color: #4099ff; }  
+  20% { color: #3a3acd; }  
+  80% { color: #3a3acd; }  
+  100% { color: #4099ff; } 
+}
+
+
+/** MEDIA QUERY */
+@media (min-width: 450px) {
+  .icon-container, cite {
+    margin-right: 50px;
+  }
+  #scaler {
+    margin-right: 30px;
+  }
+}
+
+
 /** MEDIA QUERY */
 @media (min-width: 600px) {
-  i {
-    margin: 0px 50px;
+  .icon-container, cite {
+    margin-right: 50px;
+  }
+  #scaler {
+    margin-right: 30px;
   }
 }
 
-@media (min-width: 250px) {
-  i {
-    margin: 0px 25px;
-  }
-}
+
 
 @media (min-width: 1000px) {
-  i {
-    margin: 0px 75px;
+  #scaler {
+    margin: 0px 50px;
   }
 }
