@@ -19,12 +19,16 @@ a:active {
   font-size: 2em;
 }
 
+nav{
+  background: black;
+}
+
 nav a:hover {
   text-decoration: none;
-  /*animation-name: nav-link-hover;
+  animation-name: enlight-nav;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-out;*/
+  animation-timing-function: ease-out;
   cursor: hand; 
 }
 
@@ -149,6 +153,12 @@ i:hover {
   100% { color: #4099ff; } 
 }
 
+@keyframes enlight-nav { 
+  0% { color: white; }  
+  20% { color: Chartreuse; }  
+  80% { color: Chartreuse; }  
+  100% { color: white; } 
+}
 
 /** MEDIA QUERY */
 @media (min-width: 450px) {
