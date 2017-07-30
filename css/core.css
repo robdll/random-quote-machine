@@ -33,8 +33,8 @@ nav {
 
 nav a:hover {
   text-decoration: none;
-  animation-name: enlight-nav 1.5s ease-out forwards;
-  cursor: hand; 
+  animation: enlight-nav 1.5s ease-out;
+  cursor: pointer; 
 }
 
 main {
@@ -73,6 +73,10 @@ cite {
   font-size: 3em;
   margin: 20px 0px;
   text-align: right;
+}
+
+.icon-container a {
+  font-size: inherit;
 }
 
 #scaler, #spinner {
