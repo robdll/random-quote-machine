@@ -49,7 +49,7 @@ main {
 #quote-container {
   font-family: 'Poiret One';
   flex-grow: 1;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1.5;
   text-align: center;
   display: flex;
@@ -153,22 +153,51 @@ i:hover {
 
 /** MEDIA QUERY */
 @media (min-width: 450px) {
-  .icon-container, cite {
-    margin-right: 50px;
+  main {
+    padding-left: 30px;
+    padding-right: 30px;
   }
   #scaler {
     margin-right: 30px;
+  }
+  #quote-container {
+    font-size: 2.1em;
+  }
+  cite {
+    font-size: 0.8em;
   }
 }
 
-
-/** MEDIA QUERY */
 @media (min-width: 600px) {
-  .icon-container, cite {
-    margin-right: 50px;
+  main {
+    padding-left: 50px;
+    padding-right: 50px;
   }
-  #scaler {
-    margin-right: 30px;
+  .icon-container {
+    font-size: 4em;
+  }
+  #quote-container {
+    font-size: 2.3em;
+  }
+  cite {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .icon-container {
+    font-size: 5em;
+  }
+  #quote-container {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+  cite {
+    font-size: 1em;
   }
 }
 
