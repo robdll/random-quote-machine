@@ -75,10 +75,6 @@ cite {
   text-align: right;
 }
 
-.icon-container a {
-  font-size: inherit;
-}
-
 #scaler, #spinner {
   margin: 0px 10px;
   display: inline-block;
