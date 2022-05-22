@@ -12,24 +12,28 @@ function loadQuotes() {
   quoteTag = container.find("p")[0];
   writerTag = container.find("cite")[0];
   var header = new Headers({ 'Access-Control-Allow-Origin': '*', 'Content-Type': 'multipart/form-data' });
-  fetch('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=30', {mode: 'cors', header: header})  
+  fetch('https://quotesondesign.com/wp-json/wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=30', {mode: 'cors', header: header})  
     .then(function(response) { return response.json(); })
     .then(function(response) { quotes = response; return 0; })
     .then(newQuotes)
     .catch(function(err) { 
-      newQuotes(0); 
+      console.log('asd', err)
       addStaticQuotes();
+      newQuotes(0); 
     });
 }
 
 function newQuotes(time){
   var randomIndex = Math.floor(Math.random() * quotes.length);
+  console.log(randomIndex)
   var randomQuote = quotes[randomIndex]
+  console.log(randomQuote)
   container.fadeOut(time, changeQuote);
+
   function changeQuote() {
     currentQuote = {
-      text: randomQuote.content.replace(/<\/?p>/g,'').replace(/\. /g,'.<br>').replace(/—/g,' '),
-      artist: randomQuote.title
+      text: randomQuote.yoast_head_json.og_description,
+      artist: randomQuote.title.rendered
     }
     quoteTag.innerHTML = currentQuote.text;
     writerTag.innerHTML = currentQuote.artist;
