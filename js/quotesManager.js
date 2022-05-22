@@ -17,7 +17,6 @@ function loadQuotes() {
     .then(function(response) { quotes = response; return 0; })
     .then(newQuotes)
     .catch(function(err) { 
-      console.log('asd', err)
       addStaticQuotes();
       newQuotes(0); 
     });
